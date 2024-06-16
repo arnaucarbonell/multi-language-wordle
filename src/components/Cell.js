@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Cell = ({ value }) => {
+const Cell = ({ value, color }) => {
     return (
-        <div className="cell">
+        <div className="cell" style={{ backgroundColor: color }}>
             {value}
         </div>
     );

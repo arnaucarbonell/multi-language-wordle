@@ -48,24 +48,49 @@
 }
 
 .cell {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2px;
+  font-size: 24px;
+  color: blue;
+  transition: background-color 0.3s, transform 0.5s;
+  /* Enable pointer events for front-facing side */
+  pointer-events: auto;
 }
 
 .keyboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns for keyboard */
+  gap: 5px; /* Gap between keys */
+  justify-content: center; /* Center horizontally */
 }
 
 .keyboard button {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.keyboard button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Special styling for Enter and Backspace keys */
+.keyboard button.enter {
+  grid-column: span 2; /* Span 2 columns for Enter key */
+}
+
+.keyboard button.backspace {
+  grid-column: span 2; /* Span 2 columns for Backspace key */
+}
+.correct-word {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }

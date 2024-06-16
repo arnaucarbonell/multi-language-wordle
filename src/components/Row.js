@@ -1,11 +1,11 @@
 import React from 'react';
 import Cell from './Cell';
 
-const Row = ({ row }) => {
+const Row = ({ row, colors }) => {
     return (
         <div className="row">
             {row.map((cell, cellIndex) => (
-                <Cell key={cellIndex} value={cell} />
+                <Cell key={cellIndex} value={cell} color={colors[cellIndex]} />
             ))}
         </div>
     );
