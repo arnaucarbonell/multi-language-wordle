@@ -3,13 +3,9 @@ import React from 'react';
 const Keyboard = ({ onKeyPress }) => {
     const keys = [
         'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
-        'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
-        'Z', 'X', 'C', 'V', 'B', 'N', 'M'
+        'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ñ',
+        'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'BACKSPACE',
     ];
-
-    const handleKeyClick = (key) => {
-        onKeyPress(key); // Send the key to the parent component
-    };
 
     return (
         <div className="keyboard">
